@@ -1,6 +1,6 @@
 {
   "name": "Symbiote",
-  "description": "An immersive, real-time audio-reactive breathing organ using Web Audio API and Three.js.",
+  "description": "A living creature sustained by your voice. Speak to keep it alive. Stay silent, and watch it fall apart.",
   "requestFramePermissions": [
     "microphone"
   ]
