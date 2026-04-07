@@ -1,0 +1,7 @@
+{
+  "name": "Symbiote",
+  "description": "An immersive, real-time audio-reactive breathing organ using Web Audio API and Three.js.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
