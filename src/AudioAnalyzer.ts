@@ -15,6 +15,7 @@ export class AudioAnalyzer {
   uiVolume = 0;
   uiStability = 1;
   uiTension = 0;
+  uiPitchJitter = 0;
   uiState = 'AWAITING';
 
   isInitialized = false;
@@ -78,6 +79,7 @@ export class AudioAnalyzer {
     this.uiStability = lerp(this.uiStability, targetStability, 0.05);
     let targetTension = isSpeakingNow ? Math.min(1.0, this.volume * 3.0 + this.pitchJitter) : 0.0;
     this.uiTension = lerp(this.uiTension, targetTension, 0.05);
+    this.uiPitchJitter = lerp(this.uiPitchJitter, this.pitchJitter, 0.05);
 
     if (!this.isInitialized) this.uiState = 'AWAITING';
     else if (this.silenceTime < 1.5) this.uiState = 'STABLE';
